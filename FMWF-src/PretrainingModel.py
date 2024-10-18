@@ -1,4 +1,3 @@
-#用于训练预训练模型
 import torch
 import torch.nn as nn
 import random

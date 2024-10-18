@@ -69,15 +69,15 @@ class CNNmodel(nn.Module):
         x = self.CNNnet(x)
         return x
 
-# 设置参数
+
 num_classes = 100
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# 加载模型并移动到设备
+
 model = CNNmodel(num_classes).to(device)
 model.load_state_dict(torch.load('FMWF_Pretrainmodel_weights200epoch.pth.pth'))
 
-# 加载并处理fine-tuning数据集
+
 fine_tune_df = pd.read_csv('/tor-5tab-finetuning100way40shot.csv', header=None)
 fine_tune_data = fine_tune_df.iloc[:, 106:].values
 fine_tune_labels = fine_tune_df.iloc[:, 0:100].values  # multi-hot labels
@@ -85,14 +85,14 @@ fine_tune_labels = fine_tune_df.iloc[:, 0:100].values  # multi-hot labels
 fine_tune_data = torch.tensor(fine_tune_data, dtype=torch.float32).unsqueeze(1)
 fine_tune_labels = torch.tensor(fine_tune_labels, dtype=torch.float32)
 
-# 打印fine-tuning数据集的形状
+
 print("fine_tune_data.shape:", fine_tune_data.shape)
 print("fine_tune_labels.shape:", fine_tune_labels.shape)
 
 fine_tune_dataset = TensorDataset(fine_tune_data, fine_tune_labels)
 fine_tune_loader = DataLoader(fine_tune_dataset, batch_size=32, shuffle=True)
 
-# 加载并处理验证数据集
+
 val_df = pd.read_csv('/tor5tab-dataset-val.csv', header=None)
 val_data = val_df.iloc[:, 106:].values
 val_labels = val_df.iloc[:, 0:100].values  # multi-hot labels
@@ -103,14 +103,14 @@ val_labels = torch.tensor(val_labels, dtype=torch.float32)
 val_dataset = TensorDataset(val_data, val_labels)
 validate_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 
-# 模型训练
+
 model.train()
 criterion = torch.nn.MultiLabelSoftMarginLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 num_epochs = 300
 validate_epochs = list(range(40, 301))
 
-# 初始化保存验证结果的列表
+
 validation_results = {
     "epoch": [],
     "Accuracy": [],
