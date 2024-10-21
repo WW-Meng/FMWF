@@ -14,7 +14,7 @@ The  `PretrainingModel.py` file in the folder `FMWF-src` is used to obtain the p
 ### Few-shot Fine-tuning and Testing
 For the Few-shot Fine-tuning and Testing section, we use the 5tab scenario as an example. The `tor-5tab-Accuracy.py` file in the `FMWF-src` folder is used to test the real-world collected 5tab traffic. This code includes both the Few-shot Fine-tuning for Real-world Adaptation and Testing on Dynamic Traffic stages for the 5tab scenario. You can reproduce our experiments using the fine-tuning and testing datasets from the tor dataset. Please note that the paths in the code may not match your environment, so be sure to replace them accordingly.
 
-
+The `openworld.py` in the `FMWF-src` folder is the code used in the open-world scenario, which corresponds to the open-world experimental part of the paper.
 
 
 
