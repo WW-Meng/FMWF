@@ -17,7 +17,7 @@ The source code mainly consists of three parts:
 - ### Traffic Capture and Processing
 We used the codes `2tab-capture.ipynb`, `3tab-capture.ipynb`, `4tab-capture.ipynb`, and `5tab-capture.ipynb` from the FMWF-src folder to capture multi-label traffic data in .pcap format from Google Chrome and Microsoft Edge browsers. The captured traffic data was then processed into .csv format traffic sequences using the codes `2tab-dataprocess.ipynb`, `3tab-dataprocess.ipynb`, `4tab-dataprocess.ipynb`, and `5tab-dataprocess.ipynb`.
 
-Our Tor traffic data was collected with the voluntary assistance of one of the authors of the paper "Robust Multi-tab Website Fingerprinting Attacks in the Wild" (Published in IEEE S&P 2023), and you can access their paper at this [link](https://www.computer.org/csdl/proceedings-article/sp/2023/933600b005/1OXTJ1ZxbXy).
+Our Tor traffic data was collected using the same methodology as in the paper “Robust Multi-tab Website Fingerprinting Attacks in the Wild” (published in IEEE S&P 2023).
 
 - ### Pre-training with Augmented Traffic Sequences
 The  `PretrainingModel.py` file in the folder `FMWF-src` is used to obtain the pre-training model using manually synthesized multi-tab datasets.
