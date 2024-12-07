@@ -79,7 +79,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Initialize the model and load pre-trained weights
 model = CNNmodel(num_classes).to(device)
-model.load_state_dict(torch.load('FMWF_Pretrainmodel_weights200epoch.pth.pth'))  # Load the pre-trained model weights
+model.load_state_dict(torch.load('FMWF_Pretrainmodel_weights200epoch.pth'))  # Load the pre-trained model weights
 
 # Load the fine-tuning dataset (training data)
 fine_tune_df = pd.read_csv('/tor-5tab-finetuning100way40shot.csv', header=None)
