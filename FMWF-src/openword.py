@@ -182,7 +182,10 @@ for epoch in range(num_epochs):
 
         for i, indices in enumerate(topk_indices):
             for idx in indices:
-                binarized_outputs[i, idx] = 1
+                if all_outputs[i, idx] > 0:
+                    binarized_outputs[i, idx] = 1
+                else:
+                    binarized_outputs[i, idx] = 0
 
         # Calculate validation accuracy
         val_accuracy = accuracy_score(all_targets, binarized_outputs)
