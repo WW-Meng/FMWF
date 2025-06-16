@@ -1,4 +1,4 @@
-# Source code and dataset for our paper "Beyond Single Tabs: A Transformative Few-Shot Approach to Multi-Tab Website Fingerprinting Attacks"
+# Source code and dataset for our paper "Beyond Single Tabs: A Transformative Few-Shot Approach to Multi-Tab Website Fingerprinting Attacks" (WWW’25) and Its Journal Extension. 
 
 ## Basic Environment:
 - NVIDIA GPU: RTX 3080 Ti (12GB)
