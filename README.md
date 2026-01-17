@@ -1,7 +1,7 @@
 # Source code and dataset for our paper "Beyond Single Tabs: A Transformative Few-Shot Approach to Multi-Tab Website Fingerprinting Attacks" (WWW’25) and Its Journal Extension. 
 
 We have released the dataset associated with the novel defense method proposed in our journal extension. You can download the dataset via Google Drive [link](https://drive.google.com/drive/folders/1iH-pO2_N-sQmR4AI9yc23R_N0_qvXYyr?usp=sharing).
-The corresponding defense code will be made available promptly after we receive feedback on the journal submission.
+In addition, we have made the core logic of the TGTO defense publicly available. The implementation of the TGTO obfuscation mechanism can be found in the `FMWF-src` directory, specifically in the notebook `tgto_core_obfuscation.ipynb`.
 
 ## Basic Environment:
 - NVIDIA GPU: RTX 3080 Ti (12GB)
